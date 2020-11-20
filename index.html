@@ -38,11 +38,21 @@
         font-family: sans-serif;
         color: red;
       }
-     a:hover {
-        background-image: url(lin.gif);
-        background-repeat: no-repeat;
+      a.anima:hover {
         padding-left: 20px;
         font-size: 15px;
+        -webkit-transition: background-image 0.2s ease-in-out;
+        transition: background-image 0.2s ease-in-out;
+      }
+      a.anima:hover::before {
+        opacity: 1;
+        transition: 2s;
+      }
+      a.anima::before {
+        content: "|\00a0\00a0\00a0";
+        background-image: url(lin.gif);
+        background-repeat: no-repeat;
+        opacity: 0;
       }
     </style>
   </head>
@@ -63,8 +73,12 @@
     <p><b>Первый символ параграфа</b></p>
     <p class="fonts">Текст</p>
     <p><b>Меню в обычном состоянии</b></p>
-      <a href="*">Текст меню 1</a> <br>
-      <a href="*">Текст меню 2</a> <br>
-      <a href="*">Текст меню 3</a> <br>
+    <a href="*">Текст меню 1</a> <br />
+    <a href="*">Текст меню 2</a> <br />
+    <a href="*">Текст меню 3</a> <br />
+    <br />
+    <a class="anima" href="*">Текст меню 1</a> <br />
+    <a class="anima" href="*">Текст меню 2</a> <br />
+    <a class="anima" href="*">Текст меню 3</a> <br />
   </body>
 </html>
