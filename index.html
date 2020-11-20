@@ -28,17 +28,26 @@
       .list {
         list-style-image: url(lin.gif);
       }
+      .link:hover {
+        color: red;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
-    <input class="textarea" type="text" name="полеввода" id="" /> <br>
+    <input class="textarea" type="text" name="полеввода" id="" /> <br />
     <input class="button" type="submit" value="Отправить" />
-      <!-- ul.list>li{text$}*4 -->
-      <ul class="list">
-        <li>text1</li>
-        <li>text2</li>
-        <li>text3</li>
-        <li>text4</li>
-      </ul>
+    <!-- ul.list>li{text$}*4 -->
+    <ul class="list">
+      <li>text1</li>
+      <li>text2</li>
+      <li>text3</li>
+      <li>text4</li>
+    </ul>
+    <p><b>ссылка в обычном состоянии</b></p>
+    <a href="*">ссылка</a> <br />
+    <p><b>пр наведении мыши</b></p>
+    <a class="link" href="*">ссылка</a>
   </body>
 </html>
