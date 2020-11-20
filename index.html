@@ -54,6 +54,15 @@
         background-repeat: no-repeat;
         opacity: 0;
       }
+      a.img_top:hover {
+        background-image: url(stud2.gif);
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+      .img_blok {
+        padding-top: 20px;
+        /* также добавить transition  */
+      }
     </style>
   </head>
   <body>
@@ -77,8 +86,16 @@
     <a href="*">Текст меню 2</a> <br />
     <a href="*">Текст меню 3</a> <br />
     <br />
+    <p><b>Меню</b></p>
     <a class="anima" href="*">Текст меню 1</a> <br />
     <a class="anima" href="*">Текст меню 2</a> <br />
     <a class="anima" href="*">Текст меню 3</a> <br />
+    <br />
+    <p><b>Меню</b></p>
+    <div class="img_blok">
+      <a class="img_top" href="*">Текст меню 1</a>
+      <a class="img_top" href="*">Текст меню 2</a>
+      <a class="img_top" href="*">Текст меню 3</a>
+    </div>
   </body>
 </html>
