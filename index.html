@@ -40,6 +40,7 @@
       }
       a.anima:hover {
         padding-left: 20px;
+        margin-bottom: 30px;
         font-size: 15px;
         -webkit-transition: background-image 0.2s ease-in-out;
         transition: background-image 0.2s ease-in-out;
@@ -54,14 +55,19 @@
         background-repeat: no-repeat;
         opacity: 0;
       }
-      a.img_top:hover {
+      .img_top:hover {
         background-image: url(stud2.gif);
-        background-position: top;
         background-repeat: no-repeat;
+        background-position: top;
+        padding-top: 15px;
       }
-      .img_blok {
-        padding-top: 20px;
-        /* также добавить transition  */
+      .text_link {
+        top: 0;
+        position: relative;
+        transition: top 4s ease-in-out;
+      }
+      .text_link:hover {
+        top: 14px;
       }
     </style>
   </head>
@@ -92,10 +98,11 @@
     <a class="anima" href="*">Текст меню 3</a> <br />
     <br />
     <p><b>Меню</b></p>
-    <div class="img_blok">
-      <a class="img_top" href="*">Текст меню 1</a>
-      <a class="img_top" href="*">Текст меню 2</a>
-      <a class="img_top" href="*">Текст меню 3</a>
-    </div>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 1</span></a>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 2</span></a>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 3</span></a>
+    <br />
+    <br />
+    <br />
   </body>
 </html>
