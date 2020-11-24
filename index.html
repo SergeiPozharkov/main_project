@@ -69,6 +69,12 @@
       .text_link:hover {
         top: 14px;
       }
+      table tr:hover {
+        background-color: red;
+      }
+      th:hover {
+        background-color: non;
+      }
     </style>
   </head>
   <body>
@@ -104,5 +110,48 @@
     <br />
     <br />
     <br />
+    <!-- 24/11/20 -->
+    <!-- div>.mn>a{Текст меню$}*3 -->
+      <div class="mn">
+        <a href="">Текст меню1</a>
+        <a href="">Текст меню2</a>
+        <a href="">Текст меню3</a>
+      </div>
+      <p><b>Меню</b></p>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 1</span></a>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 2</span></a>
+    <a class="img_top" href="*"><span class="text_link">Текст меню 3</span></a>
+    <!-- table#td1>(tr>th{Header$}*5)+(tr*3>td{$}+td*4) -->
+    <table id="td1">
+      <tr>
+        <th>Header1</th>
+        <th>Header2</th>
+        <th>Header3</th>
+        <th>Header4</th>
+        <th>Header5</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+        <td>текст</td>
+      </tr>
+    </table>
+    <!-- table#tab1>(tr>th{Header$}*5)+(tr*3>td{$}+td*4) -->
   </body>
 </html>
