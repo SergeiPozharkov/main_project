@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --img-size: 300px;
+      }
+      .img_hover_scale {
+        text-align: center;
+      }
+      .img_hover_scale img {
+        transition: filter 0.7s ease-in-out;
+        filter: blur(5px);
+        transition: 1s;
+        width: calc(var(--img-size) /3);
+      }
+      .img_hover_scale img:hover {
+         filter:drop-shadow(16px 16px 20px black );
+        transform: scale(1);
+        width: var(--img-size);
+        border: dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img_hover_scale">
+      <img src="lion.jpg" alt="Лев" />
+      <img src="raccoon.jpg" alt="Енот" />
+      <img src="skull.jpg" alt="Череп" />
+      <img src="hart.jpg" alt="Сердце" />
+      <img src="chess.jpg" alt="Шахматы" />
+    </div>
+  </body>
+</html>
