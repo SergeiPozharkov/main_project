@@ -7,41 +7,101 @@
   </head>
   <style>
     .chess {
-  border: 1px solid black;
-  width: 500px;
-  height:500px;
-  background-color: black;
-}
-.chess tr:nth-child(even) td:nth-child(odd),
-.chess tr:nth-child(odd) td:nth-child(even) {
-  background-color: white;
-}
-td:hover{
-/* background-color: blue !important; */
-background-image: url(chess.jpg);
-background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
-/* transition: 2s; */
-}
-/* .num_litter {
-    background-color: non;
-    style: non;
-} */
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 600px;
+      height: 600px;
+      background-color: black;
+    }
+    .chess tr:nth-child(even) td:nth-child(odd),
+    .chess tr:nth-child(odd) td:nth-child(even) {
+      background-color: white;
+    }
+    td:hover {
+      background-image: url(chess.jpg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    #top_letter {
+      background-color: white;
+      text-align: center;
+      width: 5px;
+      height: 5px;
+      /* border-bottom: 1px solid black; */
+    }
+    #top_letter td:hover {
+      background-image: none;
+    }
+    #top_letter td:first-child {
+      border: none;
+    }
+    #top_letter td:last-child {
+      border: none;
+    }
+    .top_borderbot {
+      border-bottom: 1px solid black;
+    }
+    /* .top {
+      border-bottom: none;
+    } */
+    #bot_letter {
+      background-color: white;
+      text-align: center;
+      width: 5px;
+      height: 5px;
+      /* border-top: 1px solid black; */
+    }
+    #bot_letter td:hover {
+      background-image: none;
+    }
+    #bot_letter td:first-child {
+      border: none;
+    }
+    #bot_letter td:last-child {
+      border: none;
+    }
+    .bot_bordertop {
+      border-top: 1px solid black;
+    }
+    /* .bot {
+      border-top: none;
+    } */
+    .chess td:first-child {
+      background-color: white;
+      text-align: center;
+      width: 5px;
+      border-right: 1px solid black;
+    }
+    .chess td:first-child:hover {
+      background-image: none;
+    }
+    .chess td:last-child {
+      background-color: white;
+      text-align: center;
+      width: 5px;
+      border-left: 1px solid black;
+    }
+    .chess td:last-child:hover {
+      background-image: none;
+    }
   </style>
   <body>
     <table class="chess">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr id="top_letter">
+        <td class="top"></td>
+        <td class="top_borderbot">A</td>
+        <td class="top_borderbot">B</td>
+        <td class="top_borderbot">C</td>
+        <td class="top_borderbot">D</td>
+        <td class="top_borderbot">E</td>
+        <td class="top_borderbot">F</td>
+        <td class="top_borderbot">G</td>
+        <td class="top_borderbot">H</td>
+        <td class="top"></td>
       </tr>
       <tr>
+        <td>8</td>
         <td></td>
         <td></td>
         <td></td>
@@ -50,8 +110,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>8</td>
       </tr>
       <tr>
+        <td>7</td>
         <td></td>
         <td></td>
         <td></td>
@@ -60,8 +122,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>7</td>
       </tr>
       <tr>
+        <td>6</td>
         <td></td>
         <td></td>
         <td></td>
@@ -70,8 +134,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>6</td>
       </tr>
       <tr>
+        <td>5</td>
         <td></td>
         <td></td>
         <td></td>
@@ -80,8 +146,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>5</td>
       </tr>
       <tr>
+        <td>4</td>
         <td></td>
         <td></td>
         <td></td>
@@ -90,8 +158,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>4</td>
       </tr>
       <tr>
+        <td>3</td>
         <td></td>
         <td></td>
         <td></td>
@@ -100,8 +170,10 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>3</td>
       </tr>
       <tr>
+        <td>2</td>
         <td></td>
         <td></td>
         <td></td>
@@ -110,16 +182,32 @@ background-repeat: no-repeat;
         <td></td>
         <td></td>
         <td></td>
+        <td>2</td>
       </tr>
-      <!-- <tr class="num_litter">
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-      </tr> -->
+      <tr>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+      </tr>
+      <tr id="bot_letter">
+        <td class="bot"></td>
+        <td class="bot_bordertop">A</td>
+        <td class="bot_bordertop">B</td>
+        <td class="bot_bordertop">C</td>
+        <td class="bot_bordertop">D</td>
+        <td class="bot_bordertop">E</td>
+        <td class="bot_bordertop">F</td>
+        <td class="bot_bordertop">G</td>
+        <td class="bot_bordertop">H</td>
+        <td class="bot"></td>
+      </tr>
     </table>
   </body>
 </html>
