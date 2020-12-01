@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .img_gallery_1, .img_gallery_2, .img_gallery_3 {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+      .img_gallery_1 img {
+        transition: filter 0.7s ease-in-out;
+        filter: grayscale(0%);
+      }
+      .img_gallery_1 img:hover {
+        transform: rotate(360deg);
+        transition: 2s;
+        filter: grayscale(99%);
+      }
+      .img_gallery_2 img {
+        transition: filter 0.7s ease-in-out;
+        filter: grayscale(0%);
+      }
+      .img_gallery_2 img:hover {
+        transform: rotateX(180deg);
+        transition: 2s;
+        filter: grayscale(99%);
+      }
+      .img_gallery_3 img {
+        transition: filter 0.7s ease-in-out;
+        filter: grayscale(0%);
+      }
+      .img_gallery_3 img:hover {
+        transform: rotateZ(180deg);
+        transition: 2s;
+        filter: grayscale(99%);
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Gallery #1</h1>
+    <div class="img_gallery_1">
+      <img src="lion.jpg" alt="Лев" />
+      <img src="raccoon.jpg" alt="Енот" />
+      <img src="skull.jpg" alt="Череп" />
+      <img src="hart.jpg" alt="Сердце" />
+      <img src="chess.jpg" alt="Шахматы" />
+    </div>
+    <h1>Gallery #2</h1>
+    <div class="img_gallery_2">
+      <img src="lion.jpg" alt="Лев" />
+      <img src="raccoon.jpg" alt="Енот" />
+      <img src="skull.jpg" alt="Череп" />
+      <img src="hart.jpg" alt="Сердце" />
+      <img src="chess.jpg" alt="Шахматы" />
+    </div>
+    <h1>Gallery #3</h1>
+    <div class="img_gallery_3">
+      <img src="lion.jpg" alt="Лев" />
+      <img src="raccoon.jpg" alt="Енот" />
+      <img src="skull.jpg" alt="Череп" />
+      <img src="hart.jpg" alt="Сердце" />
+      <img src="chess.jpg" alt="Шахматы" />
+    </div>
+  </body>
+</html>

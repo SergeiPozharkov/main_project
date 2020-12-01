@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        position: absolute;
+        border-radius: 50%;
+        animation-name: move;
+        width: 100px;
+        animation-name: rotation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+      @keyframes rotation {
+        0% {
+          top: 0%;
+          left: 0%;
+          transform: rotate(360deg);
+        }
+        50% {
+          bottom: 90%;
+          right: 90%;
+          transform: rotate(360deg);
+        }
+        100% {
+          bottom: 0%;
+          right: 0%;
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="move">
+      <img src="images/Smile.jpg" alt="Смайлик" />
+    </div>
+  </body>
+</html>
