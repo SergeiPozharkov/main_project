@@ -7,7 +7,10 @@
 </head>
 <body>
     <?php
-    echo 'Hello World !';
+    echo 2+5 . '<br>';
+    echo 2-5 . '<br>'; 
+    echo 2*5 . '<br>';
+    echo 2**5 . '<br>';     
     ?>
 </body>
 </html>
