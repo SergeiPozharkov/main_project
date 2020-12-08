@@ -7,10 +7,13 @@
 </head>
 <body>
     <?php
-    echo 2+5 . '<br>';
-    echo 2-5 . '<br>'; 
-    echo 2*5 . '<br>';
-    echo 2**5 . '<br>';     
+    $a = 2;
+    $b = 3;
+    echo $a . $b;
+    echo "<br>";
+    $a = "2";
+    $b = "3";
+    echo $a + $b;
     ?>
 </body>
 </html>
