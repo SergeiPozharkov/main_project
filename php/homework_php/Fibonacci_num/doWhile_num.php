@@ -1,14 +1,23 @@
 <?php
 $f0 = 0;
 $f1 = 1;
-$n = 10;
+$n = $_POST["n"];
 $i = 0;
 
-do {
-    $fn = $f0 + $f1;
-    $f0 = $f1;
-    $f1 = $fn;
-    $i++;
+if ($n < 2) {
+    echo $f0 . "&nbsp;";
     echo $f1 . "&nbsp;";
-} while ($i < $n);
+} else {
+    echo $f0 . "&nbsp;";
+    echo $f1 . "&nbsp;";
+    do {
+        $fn = $f0 + $f1;
+        $f0 = $f1;
+        $f1 = $fn;
+        $i++;
+        echo $f1 . "&nbsp;";
+    } while ($i < $n - 1);
+}
+
+
 // Выводит N элементов ряда Фибоначчи используя цикл do While.

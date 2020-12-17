@@ -1,10 +1,13 @@
 <?php
 $f0 = 0;
 $f1 = 1;
-$n = 10;
+$n = $_POST["n"];
 $i = 0;
 
-while ($i < $n - 2) {
+echo $f0 . "&nbsp;";
+echo $f1 . "&nbsp;";
+
+while ($i < $n - 1) {
     $fn = $f0 + $f1;
     $f0 = $f1;
     $f1 = $fn;
