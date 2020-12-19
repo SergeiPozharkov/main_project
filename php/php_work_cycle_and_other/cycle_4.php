@@ -5,12 +5,13 @@ $x = 1;
 
 foreach ($array as $value) {
     if (($x++ % 10) == 0) {
-        $str .= $value . "<br>";
+        $str .= $value . '<br>';
     } else {
         $str .= $value . '&nbsp;';
     }
-    echo $str;
 }
+echo $str;
+// выводит массив от 1 до 100 случайным образом, по 10 элементов в строке.
 //или
 // $str .= (($x++ % 10) == 0) ? ($value . "<br>") : ($value . '&nbsp;');
 // " ?: " - тернарный оператор;
