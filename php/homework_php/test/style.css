@@ -1,0 +1,12 @@
+body {
+  background-color: #82d3ff;
+  
+}
+ #button {
+     margin-left: 91%;
+     padding: 20px;
+     background-color: red;
+ }
+#button:hover {
+    cursor: pointer;
+ }
