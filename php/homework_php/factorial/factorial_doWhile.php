@@ -1,5 +1,5 @@
 <?php
-$n = 5;
+$n = $_POST['n'];
 $calcFactorial = 1;
 $i = 1;
 
