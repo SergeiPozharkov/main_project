@@ -17,7 +17,7 @@
     $weight = $_POST['weight'];
     $tona = 1000000;
 
-    function Grains($width, $height)
+    function grainsSum($width, $height)
     {
 
         $grainsSum = 0;
@@ -28,9 +28,9 @@
         return $grainsSum;
     }
 
-    echo Grains($width, $height) . ' - Сумма зерен' . '<br>';
+    echo grainsSum($width, $height) . ' - Сумма зерен' . '<br>';
 
-    echo 'Суммарная масса зерен (в тоннах) - ' . Grains($width, $height) *  $weight / $tona . ' тонн';
+    echo 'Суммарная масса зерен (в тоннах) - ' . grainsSum($width, $height) *  $weight / $tona . ' тонн';
 
     for ($i = 1; $i <= $width; $i++) {
         $table .= '<tr>';
