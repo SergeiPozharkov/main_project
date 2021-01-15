@@ -10,8 +10,9 @@
 <body>
     <?php
 
-    echo "<table border='1'><th colspan = 3>Зарплатная смета:</th>";
-
+    $table .= "<table border='1'><th colspan = 3>Зарплатная смета:</th>";
+    $table .= "<tr><td>№</td><td>Фамилия</td><td>Сумма заработной платы</td></tr>";
+    
     function array_totable($list, $table)
     {
         foreach ($list as $value) {
@@ -35,7 +36,7 @@
 
     echo array_totable($list, $table);
 
-    echo "</table>";
+    $table .= "</table>";
     ?>
 </body>
 
