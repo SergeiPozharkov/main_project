@@ -13,3 +13,5 @@ $fp = fopen("data.txt", "w+");
 fwrite($fp, $saveData);
 
 fclose($fp);
+
+echo "Спасибо за ответ!";
