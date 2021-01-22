@@ -21,7 +21,7 @@
 
     $saveData = implode("\n", $data);
 
-    $sumData = $data[0] + $data[1] + $data[2];
+    $sumData = $data[0] + $data[1] + $data[2]; // or array_sum()
 
     file_put_contents("data.txt", $saveData);
 
