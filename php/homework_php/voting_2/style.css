@@ -9,7 +9,7 @@ input {
 
 input[type="submit"] {
   width: 35%;
-  background-color: red;
+  background-color: blue;
 }
 
 input[type="submit"]:hover {
@@ -20,7 +20,7 @@ input[type="radio"]:hover {
   cursor: pointer;
 }
 
-div {
+div[class="voting_area"] {
   border-width: 5px;
   border-style: solid;
   border-color: black;
@@ -30,5 +30,18 @@ div {
   top: 50%;
   left: 50%;
   margin: -125px 0 0 -125px;
-  background-color: #42d21d;
+  background-color: #abcbff;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  color: white;
 }
