@@ -36,9 +36,16 @@
         <h1><?= $question ?></h1>
         <br>
         <?php
+        $sum = 0;
+        foreach ($answers as $key => $value) {
+            $sum += $value[1];
+        }
+        $res = $sum / 100;
+
         foreach ($answers as $key => $value) {
             $count = $value[1] * 1;
-            echo "<input type='radio' value='$key' name='answer'><b>$value[0] ($count)</b><div class='diagram' style='width:$count%'></div><br>\n";
+            $persent = round(($count / $res), 2);
+            echo "<input type='radio' value='$key' name='answer'><b>$value[0] ($count) $persent%</b><div class='diagram' style='width:$count%'></div><br>\n";
         }
         ?>
         <input type="submit" value="ok">
