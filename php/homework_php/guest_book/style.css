@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+  background-color: rgb(123, 210, 221);
+}
+
+.table {
+  width: max-content;
+  height: auto;
+  position: relative;
+  margin-right: 50%;
+  margin-left: 40%;
+  background-color: white;
+}
+
+td {
+  text-align: left;
+}
+
+input[type="submit"] {
+  width: 100px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}

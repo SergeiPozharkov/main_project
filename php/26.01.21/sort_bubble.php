@@ -1,18 +1,20 @@
 <?php
 
-function bubbleSort($arrray)
+function bubbleSort($array)
 {
+    for ($n = count($array) - 1; $n > 0; $n--) {
 
-    for ($n = count($arrray) - 1; $n > 0; $n--) {
         for ($i = 0; $i < $n; $i++) {
-            if ($arrray[$i] > $arrray[$i + 1]) {
-                $buff = $arrray[$i];
-                $arrray[$i] = $arrray[$i + 1];
-                $arrray[$i + 1] = $buff;
+
+            if ($array[$i] > $array[$i + 1]) {
+
+                $buff = $array[$i];
+                $array[$i] = $array[$i + 1];
+                $array[$i + 1] = $buff;
             }
         }
     }
-    return $arrray;
+    return $array;
 }
 
 $arr = [2, 4, 3, 5, 9];
