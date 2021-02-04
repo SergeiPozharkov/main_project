@@ -15,13 +15,9 @@
         <input type="submit" value="filter text">
     </form>
     <br>
-    <?php
-    if (!empty($_POST["text"])) {
+    <?php if (!empty($_POST["text"])) {
         include "script.php";
-        echo $strRes . '<br>';
-        echo " Слово 'Привет' встретилось - " . $wordsCount . " раз(а)";
-    }
-    ?>
+    } ?>
 </body>
 
 </html>

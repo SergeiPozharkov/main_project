@@ -12,6 +12,9 @@ $strRes = preg_replace($pat, $rep, $str);
 
 $wordsCount = preg_match_all($pat1, $str);
 
+echo $strRes . '<br>';
+echo " Слово 'Привет' встретилось - " . $wordsCount . " раз(а)";
+
 //or var#2
 
 // $pat2 = "Привет";
