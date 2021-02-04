@@ -1,0 +1,35 @@
+/* обнуление margin и padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  background-color: rgba(83, 138, 101, 0.568);
+}
+
+textarea {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+textarea[placeholder="Write text"] {
+  text-align: center;
+}
+
+input[type="submit"] {
+  height: 30px;
+  width: 100px;
+  background-color: cyan;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+textarea:hover {
+  background-color: silver;
+}
