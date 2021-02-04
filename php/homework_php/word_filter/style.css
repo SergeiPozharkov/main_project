@@ -10,10 +10,20 @@ body {
 }
 
 textarea {
+  background-color: silver;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+textarea:hover {
+  background-color: white;
+}
+
+textarea:focus {
+  background-color: white;
+  outline: none;
 }
 
 textarea[placeholder="Write text"] {
@@ -28,8 +38,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   cursor: pointer;
-}
-
-textarea:hover {
-  background-color: silver;
 }
