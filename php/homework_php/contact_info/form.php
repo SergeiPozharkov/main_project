@@ -90,8 +90,9 @@ if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"
         $_POST["phone"] . "\n" .
         $_POST["sn_address"] . "\n";
     file_put_contents("data.txt", $row, FILE_APPEND);
-} elseif (strripos($data, $row)) {
-    file_put_contents("data.txt", $row, LOCK_EX);
-    echo "<p>data is available in the database!</p>";
 }
+//  elseif (strripos($data, $row)) {
+//     file_put_contents("data.txt", $row, LOCK_EX);
+//     echo "<p>data is available in the database!</p>";
+// }
 // strripos();
