@@ -49,7 +49,6 @@ if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"
 
     $str2 = $_POST["email"];
 
-    // $pat1 = "/^(?:[A-Z\d]+(?:[-_.]?[A-Z\d]+)?@[A-Z\d_.-]+(?:\.?[A-Z\d]+)?\.[A-Z]{2,5})$/i";
     $pat1 = "/^(?:[A-Z\d]+(?:[-_.]?[A-Z\d]+)?@([A-Z\d_.-])+\.[A-Z]{2,6})$/iu";
 
     if (preg_match($pat1, $str2)) {
