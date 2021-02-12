@@ -83,7 +83,7 @@ if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"
 
 $data = file_get_contents("data.txt");
 
-if ((!empty($_POST)) && ($_POST["name"] != "") && ($_POST["surname"] != "") && ($_POST["email"] != "") && ($_POST["phone"] != "") && ($_POST["sn_address"] != "")) {
+if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"]) && !empty($_POST["phone"]) && !empty($_POST["sn_address"])) {
     $row = "\n<======>\n" .
         $_POST["name"] . "\n" .
         $_POST["surname"] . "\n" .
