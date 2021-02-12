@@ -59,7 +59,7 @@ if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"
 
     $str3 = $_POST["phone"];
 
-    $pat2 = "/^\+375\(?(29|33|44|25)\)?+[\d]{7,7}$/u";
+    $pat2 = "/^(80|\+375)\(?(29|33|44|25)\)?+[\d]{7}$/u";
 
     if (preg_match($pat2, $str3)) {
         echo "<p>Phone is correct</p>" . '<br>';
@@ -90,8 +90,8 @@ if (!empty($_POST["name"]) && !empty($_POST["surname"]) && !empty($_POST["email"
         $_POST["phone"] . "\n" .
         $_POST["sn_address"] . "\n";
     file_put_contents("data.txt", $row, FILE_APPEND);
-} 
-// elseif (strpos($data, $row)) {
-//     file_put_contents("data.txt", $row, LOCK_EX);
-//     echo "<p>data is available in the database!</p>";
-// }
+} elseif (strripos($data, $row)) {
+    file_put_contents("data.txt", $row, LOCK_EX);
+    echo "<p>data is available in the database!</p>";
+}
+// strripos();
