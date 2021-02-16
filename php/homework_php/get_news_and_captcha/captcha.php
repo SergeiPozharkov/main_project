@@ -39,7 +39,7 @@ if (!empty($_POST["userNumber"])) {
     $pat = "/.*(" . $arrWords[$number[0]] . ")\s+(" . $arrWords[$number[1]] . ").*/iu";
 
     if (preg_match($pat, $data)) {
-        echo "Verification complet edsuccessfully, you are not a robot!";
+        echo "Verification complet, you are not a robot!";
     } else {
         echo "You are a robot!";
     }
@@ -47,7 +47,7 @@ if (!empty($_POST["userNumber"])) {
     echo "Please enter captcha";
 }
  //var #1
- 
+
 // $num = "1 2 3";
 //  $data = $_POST["text"];
 
