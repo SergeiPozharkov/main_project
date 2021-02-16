@@ -49,7 +49,7 @@ if (!empty($_POST["userNumber"])) {
  //var #1
 
 // $num = "1 2 3";
-//  $data = $_POST["text"];
+//  $data = $_POST["userNumber"];
 
 // $res = preg_replace(
 //     [
