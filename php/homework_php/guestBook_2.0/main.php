@@ -20,8 +20,18 @@
     $data = json_decode(file_get_contents("data.json"), true);
 
     foreach ($data as $row) {
-        echo smile($row["msg"]) . $row["name"] . censure($row["msg"]) .  "<br>\n";
+        // if (!censure($row["msg"])) {
+    
+            $date = preg_replace("/\b\d{2}+\-\d{2}+\-\d{2}+\b/ius", " ", $row["time"]);
+    
+            echo smile($row["msg"]) . " " . $row["name"] . $date . "<br>\n";
+        // }
+    
     }
+
+    // foreach ($data as $row) {
+    //     echo smile($row["msg"]) . $row["name"] . censure($row["msg"]) .  "<br>\n";
+    // }
     ?>
 </body>
 

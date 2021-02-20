@@ -15,7 +15,5 @@ function smile($text)
 
 function censure($text)
 {
-if(preg_match("/дурак/iu",$text)){
-    return "есть плохое слово";
-}
+    return preg_match_all("/.*дурак.*/iu", $text);
 }
