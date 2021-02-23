@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  text-align: center;
+}
+input[type="submit"] {
+    width: 100px;
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+}
