@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm">
-                One of three columns
+
             </div>
             <div class="col-sm" id="center">
                 <input type="text" name="" id="result" value="<?php include "clickButton.php"; ?>" readonly>
@@ -34,7 +34,7 @@
 
             </div>
             <div class="col-sm">
-                One of three columns
+
             </div>
         </div>
     </div>

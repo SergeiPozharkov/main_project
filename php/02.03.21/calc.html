@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <script src="calc.js"></script>-->
+    <title>Document</title>
+</head>
+<body>
+<form action="calc.php" method="post">
+    <input type="text" id="fild" value="0" name="fild">
+    <button type="submit">Calc</button>
+</form>
+<button onclick="f()">Clean</button>
+<button onclick="insertNum(1)">1</button>
+<button onclick="insertNum(2)">2</button>
+<button onclick="insertNum(3)">3</button>
+<button onclick="insertNum(4)">4</button>
+<button onclick="insertNum(5)">5</button>
+<button onclick="insertNum(6)">6</button>
+<button onclick="insertNum(7)">7</button>
+<button onclick="insertNum(8)">8</button>
+<button onclick="insertNum(9)">9</button>
+<button onclick="insertNum(0)">0</button>
+<button onclick="insertNum('+')">+</button>
+<button onclick="insertNum('-')">-</button>
+<button onclick="insertNum('/')">/</button>
+<button onclick="insertNum('*')">*</button>
+
+<script>
+    function f() {
+        document.getElementById('fild').value = ""
+        // alert('Hello!')
+    }
+
+    function insertNum(value) {
+        document.getElementById('fild').value += value
+    }
+</script>
+</body>
+</html>
