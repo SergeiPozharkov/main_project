@@ -9,31 +9,37 @@ input[type="submit"] {
   margin-right: 5px;
 }
 
-input[type="button"] {
-  width: 50px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-
-input[type="text"] {
-  width: 210px;
-  margin-bottom: 5px;
-}
-
 #delete {
-  width: 110px;
+  width: 140px;
 }
 
 #result {
-  width: 210px;
+  width: 215px;
   height: 40px;
 }
 
 #button2 {
-margin-left: 100px;
-margin-bottom: 10px;
+  margin-left: 140px;
+  margin-bottom: 10px;
+  width: 130px;
 }
+
 #button1 {
-  width: 51px;
-  margin: 0;
+  margin-left: 157px;
+  margin-bottom: 10px;
+  width: 105px;
+}
+
+#operation_start {
+  width: 105px;
+}
+
+#calc {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+#center.col-sm {
+  margin-top: 20px;
+  text-align: center;
 }

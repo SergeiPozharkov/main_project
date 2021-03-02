@@ -3,7 +3,7 @@
 include "functions.php";
 
 if (!empty($_POST["zero"])) {
-    $zero =  $_POST["zero"];
+    $zero = $_POST["zero"];
     file_get_contents("data.txt");
     file_put_contents("data.txt", $zero, FILE_APPEND);
 } elseif (!empty($_POST["one"])) {
@@ -50,7 +50,7 @@ if (!empty($_POST["zero"])) {
     $minus = $_POST["minus"];
     file_get_contents("data.txt");
     file_put_contents("data.txt", " " . $minus . " ", FILE_APPEND);
-} elseif (!empty($_POST["multyply"])) {
+} elseif (!empty($_POST["multiply"])) {
     $multiply = $_POST["multiply"];
     file_get_contents("data.txt");
     file_put_contents("data.txt", " " . $multiply . " ", FILE_APPEND);
