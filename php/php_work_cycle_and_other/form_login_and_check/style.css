@@ -1,0 +1,9 @@
+div[class="container"] {
+    width: 450px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
