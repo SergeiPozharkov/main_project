@@ -14,7 +14,7 @@ class User
 {
     public $name = "Имя";
     public $password = "Пароль";
-    public $emeil = "Эмэйл";
+    public $email = "Эмэйл";
     public $city = "Город";
 }
 
@@ -24,8 +24,11 @@ $user1 = new User();
 $admin->name = "Anton";
 $user1->name = "Kolya";
 
-echo $admin->name;
-echo $user1->name;
+echo $admin->name . "<br>";
+echo $user1->name . " ";
+
+$user1->surname = "Petrov";
+echo $user1->surname;
 ?>
 </body>
 </html>
