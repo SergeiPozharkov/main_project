@@ -12,3 +12,18 @@ FROM Salespeople,
      Customers
 WHERE sname < cname
   AND rating < 200
+
+-- Вы можете поместить многочисленые запросы вместе и объединить их вывод,
+-- используя предложение UNION. Предложение UNION обьединяет вывод двух или более SQL запросов в единый набор строк
+-- и столбцов. Например, чтобы получить всех продавцов и заказчиков размещенных в Лондоне и вывести их как единое целое
+-- вы могли бы ввести:
+
+SELECT snum,
+       sname
+FROM Salespeople
+WHERE city = 'London'
+UNION
+SELECT cnum,
+       cname
+FROM Customers
+WHERE city = 'London'
