@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body.main {
+    text-align: center;
+    background-image: url("images/bg_opros.jpg");
+}
+
+body.thanks {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
