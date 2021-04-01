@@ -19,7 +19,7 @@
 
         </div>
         <div class="col-sm">
-            <form class="opros" action="crud/add.php" method="post">
+            <form class="opros" action="crud/add_survey.php" method="post">
                 <div class="opros__city">
                     <label class="col-form-label">Из какого вы города? </label><input type="text" name="city"
                                                                                       class="form-control">
