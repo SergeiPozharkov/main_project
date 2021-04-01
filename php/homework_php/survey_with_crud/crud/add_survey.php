@@ -9,4 +9,4 @@ if (!empty($_POST)) {
     mysqli_query($link, $sql);
 }
 
-header("Location: ../thanks_page.php");
+header("Location: ../alerts/thanks_page.php");

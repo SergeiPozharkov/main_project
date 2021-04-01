@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body class="thanks">
@@ -20,9 +20,9 @@
         </div>
     </div>
 </div>
-<a id="retry" class="btn btn-primary" href="opros.php">Пройти опрос заново</a>
+<a id="retry" class="btn btn-primary" href="../index.php">Пройти опрос заново</a>
 <br>
-<a class="btn btn-primary" href="login_for_admin.php">Только для администратора</a>
+<a class="btn btn-primary" href="../admin/login_for_admin.php">Только для администратора</a>
 
 </body>
 </html>
