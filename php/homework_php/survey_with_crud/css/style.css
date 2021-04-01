@@ -5,10 +5,14 @@
 
 body.main {
     text-align: center;
-    background-image: url("images/bg_opros.jpg");
+    background-image: url("../images/bg_opros.jpg");
 }
 
 body.thanks {
+    text-align: center;
+}
+
+div#test {
     text-align: center;
 }
 
@@ -16,7 +20,8 @@ h1 {
     margin-bottom: 10px;
 }
 
-a {
+a#retry {
     text-decoration: none;
     color: white;
+    margin-bottom: 10px;
 }
