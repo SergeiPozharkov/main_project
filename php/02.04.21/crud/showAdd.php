@@ -22,35 +22,21 @@
                 include_once "connect.php";
                 /**
                  * @var mysqli $link connect to db
-                 * @var array $conf config data  file config
+                 * @var array $conf config data of file config
                  */
 
                 $fields = fieldsList($link, $conf["mysql"]["table"]);
                 foreach ($fields as $field) {
                     ?>
-                    <input type="text" name="<?= $field ?>" class="form-control" placeholder="<?= $field ?>"><br>
+                    <div class="input-group mb-3">
+                        <input type="text" name="<?= $field ?>" class="form-control" placeholder="<?= $field ?>">
+                    </div>
 
                     <?php
 
                 }
 
                 ?>
-                <div class="input-group mb-3">
-                    <input type="text" name="city" class="form-control" placeholder="Город" aria-label="Username"
-                           aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" name="email" class="form-control" placeholder="Email" aria-label="Username"
-                           aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" name="gender" class="form-control" placeholder="Пол" aria-label="Username"
-                           aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" name="age" class="form-control" placeholder="Возраст" aria-label="Username"
-                           aria-describedby="basic-addon1">
-                </div>
                 <input class="btn btn-secondary" type="submit" value="Добавить">
             </form>
         </div>

@@ -14,10 +14,10 @@
 
 include_once "connect.php";
 
-//echo $_GET["id"];
+/** @var array $conf */
+$sql = "SELECT * FROM `{$conf['mysql']['table']}` WHERE id =$_GET[id]";
 
-$sql = "SELECT * FROM `{$conf['mysql']['table']}` WHERE `id` = $_GET[id]";
-/** @var false|mysqli $link */
+/** @var mysqli $link */
 $result = mysqli_query($link, $sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -35,11 +35,8 @@ $row = mysqli_fetch_assoc($result);
                 foreach ($fields as $field) {
                     ?>
                     <input type="text" name="<?= $field ?>" value="<?= $row[$field] ?>" class="form-control"><br>
-
                     <?php
-
                 }
-
                 ?>
                 <input type="submit" class="btn btn-primary" value="Сохранить">
             </form>
