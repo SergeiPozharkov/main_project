@@ -13,33 +13,40 @@
 <?php
 
 /**
- * @var mysqli $link connect to db
- * @var array $conf config data  file config
+ * @var mysqli $link подключение к бд
+ * @var array $conf сонфигурационные данные из файла config.php
  */
 
+// Подключение файла с данными по подключению к БД
 include_once "connect.php";
 
-
+// Переменная содержащая результат вызова функции fieldsList, которая возвращает наименования всех полей(кроме id)
 $fields = fieldsList($link, $conf["mysql"]["table"]);
 
 /** @var array $conf */
+// Запрос к таблице БД на показ всех полей таблицы
 $sql = "SELECT * FROM `{$conf['mysql']['table']}`";
 
 /** @var mysqli $link */
+// Функция осуществляющая запрос к БД
 $result = mysqli_query($link, $sql);
 
+// Вывод открывающегося тега table
 echo "<table border='1' class='table table-hover table-dark'>";
 
+// Переменная, содержащая пустую строку
 $headers = "";
+//Перебор массива содержащего названия полей таблицы БД с последующим помещением в пустую строку и оборачиванием в заглавный тег <th></th>
 foreach ($fields as $field) {
     $headers .= "<th>$field</th>";
 }
 //$headers = "<th>" . implode("</th> <th>", $fields) . "</th>"; // Вариант 2
 
+// Вывод заголовков таблицы
 echo "$headers<th>Удалить</th><th>Изменить</th>";
 
+// Цикл осуществляющий генерацию строк и столбцов таблицы
 while ($row = mysqli_fetch_assoc($result)) {
-//    print_r($row);
     $tableRow = "";
     foreach ($fields as $field) {
         $tableRow .= "<td>$row[$field]</td>";

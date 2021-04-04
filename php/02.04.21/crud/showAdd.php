@@ -19,13 +19,16 @@
             <form action="add.php" method="post">
                 <?php
 
+                // Подключение файла с данными по подключению к БД
                 include_once "connect.php";
                 /**
-                 * @var mysqli $link connect to db
-                 * @var array $conf config data of file config
+                 * @var mysqli $link подключение к бд
+                 * @var array $conf сонфигурационные данные из файла config.php
                  */
 
+                // Переменная содержащая результат вызова функции fieldsList, которая возвращает наименования всех полей(кроме id)
                 $fields = fieldsList($link, $conf["mysql"]["table"]);
+                // Перебор генерирующий поля формы
                 foreach ($fields as $field) {
                     ?>
                     <div class="input-group mb-3">

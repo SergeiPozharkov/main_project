@@ -12,13 +12,18 @@
 <body>
 <?php
 
+// Подключение файла с данными по подключению к БД
 include_once "connect.php";
 
 /** @var array $conf */
+// Запрос к таблице БД на показ всех полей таблицы
 $sql = "SELECT * FROM `{$conf['mysql']['table']}` WHERE id =$_GET[id]";
 
 /** @var mysqli $link */
+// Функция осуществляющая запрос к БД
 $result = mysqli_query($link, $sql);
+
+// Функция создающия ассоциотивный массив по результатам запроса к таблице БД
 $row = mysqli_fetch_assoc($result);
 
 ?>
@@ -31,7 +36,10 @@ $row = mysqli_fetch_assoc($result);
             <form action="edit.php" method="post">
                 <input type="hidden" name="id" value="<?= $row['id'] ?>">
                 <?php
+
+                // Переменная содержащая результат вызова функции fieldsList, которая возвращает наименования всех полей(кроме id)
                 $fields = fieldsList($link, $conf["mysql"]["table"]);
+                // Перебор генерирующий поля формы
                 foreach ($fields as $field) {
                     ?>
                     <input type="text" name="<?= $field ?>" value="<?= $row[$field] ?>" class="form-control"><br>
