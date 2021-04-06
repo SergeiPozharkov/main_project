@@ -23,7 +23,6 @@ class Calc
     {
         $this->a = $a;
         $this->b = $b;
-
     }
 
     /**
