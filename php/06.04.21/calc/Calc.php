@@ -61,6 +61,15 @@ class Calc
         return $this->a / $this->b;
     }
 
+    /**
+     * Функция для возведения в степень.
+     * @return float
+     */
+    public function degree(): float
+    {
+        return $this->a ** $this->b;
+    }
+
 
 }
 
