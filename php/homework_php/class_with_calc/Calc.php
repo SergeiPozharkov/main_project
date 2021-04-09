@@ -6,7 +6,7 @@
 class Calc
 {
     /**
-     * @var float переменная, для вычесленийкалькулятора.
+     * @var float переменная, для вычеслений калькулятора.
      */
     public float $num;
 
@@ -43,9 +43,8 @@ class Calc
      */
     public function sinus(): float
     {
-        return sin($this->num);
+        return sin($this->num * pi() / 180);
     }
-
 
 }
 
