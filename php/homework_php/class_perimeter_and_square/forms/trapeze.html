@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Trapeze</title>
+</head>
+<body class="page-trapeze">
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+            <form action="../classes/Trapeze.php" method="post" class="page-trapeze__form">
+                <span>Длина верхнего основания: </span><input type="text" name="a" class="form-control"><br>
+                <span>Длина нижнего основания: </span><input type="text" name="b" class="form-control"><br>
+                <span>Длина стороны: </span><input type="text" name="c" class="form-control"><br>
+                <span>Операция: </span><select name="operations" class="form-select">
+                <option hidden=""></option>
+                <option value="square">Площадь</option>
+                <option value="perimeter">Периметр</option>
+            </select><br>
+                <input type="submit" class="btn btn-secondary" value="Рассчитать">
+            </form>
+            <br>
+            <a href='../index.html' class='btn btn-primary'>Вернуться на главную</a>
+        </div>
+        <div class="col-sm">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/*Стили для главной страницы index.html*/
+
+.main {
+    text-align: center;
+    background-image: url("../images/main_bg.png");
+    background-size: 1000px;
+    /*background-repeat: no-repeat;*/
+}
+
+#main__button1, #main__button2 {
+    margin-bottom: 15px;
+}
+
+.main__heading {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*Стили для страницы circle.html*/
+
+.page-circle {
+    text-align: center;
+}
+
+.page-circle__form {
+    margin-top: 15px;
+}
+
+/*Стили для страницы cube.html*/
+
+.page-cube {
+    text-align: center;
+}
+
+.page-cube__form {
+    margin-top: 15px;
+}
+
+/*Стили для страницы trapeze.html*/
+
+.page-trapeze {
+    text-align: center;
+}
+
+.page-trapeze__form {
+    margin-top: 15px;
+}
+
+/*Стили для алертов страницы header.php и footer.php*/
+
+.page-alerts {
+    text-align: center;
+}
+
+#page-alerts__danger {
+    text-align: center;
+}
+
+#page-alerts__result {
+    text-align: center;
+}
