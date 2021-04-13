@@ -52,12 +52,12 @@ class Trapeze
         }
     }
 
-    public function square()
+    public function square(): float
     {
         return ($this->a + $this->b) / 2 * sqrt($this->c ** 2 - ($this->a - $this->b) ** 2 / 4);
     }
 
-    public function perimeter()
+    public function perimeter(): float
     {
         return $this->a + $this->b + $this->c * 2;
     }

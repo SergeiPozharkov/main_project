@@ -22,12 +22,12 @@ class Circle
         }
     }
 
-    public function square()
+    public function square(): float
     {
         return pi() * $this->a ** 2;
     }
 
-    public function perimeter()
+    public function perimeter(): float
     {
         return 2 * pi() * $this->a;
     }

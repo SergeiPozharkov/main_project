@@ -22,12 +22,12 @@ class Cube
         }
     }
 
-    public function square()
+    public function square(): float
     {
         return ($this->a ** 2) * 6;
     }
 
-    public function perimeter()
+    public function perimeter(): float
     {
         return $this->a * 12;
     }
