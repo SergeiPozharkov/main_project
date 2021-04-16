@@ -19,12 +19,16 @@
             <?php
 
             include "class/Table.php";
+            if (!empty($_POST["tableTop"]) && !empty($_POST["tableLegs"])) {
+                $calc = new Table($_POST["tableTop"], $_POST["tableLegs"], $_POST["jobCost"]);
 
-            $calc = new Table($_POST["tableTop"], $_POST["tableLegs"], $_POST["jobCost"]);
-
-            echo "<div class='alert alert-success' id='calculation__alert' role='alert'>Стоимость =  
-            {$calc->{$_POST["converter"]}()} $ (в т.ч. стоимость работы {$_POST['jobCost']} $)</div>";
-            echo "<a href='index.html' class='btn btn-primary'>Вернуться</a>";
+                echo "<div class='alert alert-success' id='calculation__alert' role='alert'>Стоимость =  
+                {$calc->{$_POST["converter"]}()} $ (в т.ч. стоимость работы {$_POST['jobCost']} $)</div>";
+                echo "<a href='index.html' class='btn btn-primary'>Вернуться</a>";
+            } else {
+                echo "<div class='alert alert-danger' role='alert' id='calculation__alert'>Заполните все поля!</div>";
+                echo "<a href='index.html' class='btn btn-primary'>Вернуться</a>";
+            }
             ?>
         </div>
         <div class="col-sm">

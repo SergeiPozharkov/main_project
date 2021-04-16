@@ -31,11 +31,9 @@ class Table
      */
     public function setTableTopDm(float $tableTop): void
     {
-
         if ($tableTop > 0) {
             $this->tableTop = $tableTop;
         }
-
     }
 
     /** Стоимость работы.
