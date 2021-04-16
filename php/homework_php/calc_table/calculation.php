@@ -24,7 +24,7 @@
                 $calc = new Table($_POST["tableTop"], $_POST["tableLegs"], $_POST["jobCost"]);
 
                 echo "<div class='alert alert-success' id='calculation__alert' role='alert'>Стоимость =  
-                {$calc->{$_POST["converter"]}()} $ (в т.ч. стоимость работы {$_POST['jobCost']} $)</div>";
+                {$calc->{$_POST["converter"]}()} $ (в т.ч. стоимость работы {$_POST["jobCost"]} $)</div>";
                 echo "<a href='index.html' class='btn btn-primary'>Вернуться</a>";
             } else {
                 echo "<div class='alert alert-danger' role='alert' id='calculation__alert'>Заполните все поля!</div>";

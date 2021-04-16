@@ -12,7 +12,6 @@ class Table
         $this->setJobCost($jobCost);
         $this->setTableTopDm($tableTop);
         $this->setTableLegsDm($tableLegs);
-
     }
 
     /** Высота ножек в дм.
@@ -24,7 +23,6 @@ class Table
             $this->tableLegs = $tableLegs;
         }
     }
-
 
     /** Площадь столешницы в дм.
      * @param float $tableTop
