@@ -19,6 +19,7 @@
             <?php
 
             include "class/Table.php";
+
             if (!empty($_POST["tableTop"]) && !empty($_POST["tableLegs"])) {
                 $calc = new Table($_POST["tableTop"], $_POST["tableLegs"], $_POST["jobCost"]);
 
