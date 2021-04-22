@@ -41,7 +41,7 @@ class Mult extends Calc2
 $calc = new Calc2(10, 2);
 echo $calc->difference();
 echo "<br>";
-$calc2 = new Div(10, 2);
+$calc2 = new Button(10, 2);
 echo $calc2->division();
 echo "<br>";
 $calc3 = new Mult(5, 2);
