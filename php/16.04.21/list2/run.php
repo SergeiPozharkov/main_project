@@ -4,9 +4,9 @@ include "TList.php";
 include "Ol.php";
 include "Ul.php";
 
-$ol = new Ol();
+$ol = new OlMap();
 
-echo $ol->setData(["Иванов", "Петров", "Сидоров"])->setType("1")->html() . "<br>";
+echo $ol->setData1(["Иванов", "Петров", "Сидоров"])->setType("1")->html() . "<br>";
 echo $ol->setType("A")->html() . "<br>";
 
 
