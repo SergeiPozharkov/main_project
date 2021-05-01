@@ -22,11 +22,10 @@
             include "autoLoader.php";
             include "unitTest.php";
 
-            $tictac = new Tictac();
+            $tictac = new Tictac(3);
 
             //print_r
             ($tictac
-                ->init(3)
                 ->putCross(1, 2)
                 ->putZero(1, 1)
                 ->getMap()
@@ -37,53 +36,97 @@
                 ->setMap($tictac->getMap())
                 ->getHtmlTable();
 
-            //test($tictac->init(2)->getMap(),
-            //    [
-            //        ["", ""],
-            //        ["", ""]
-            //
-            //    ]
-            //);
-            //
-            //
-            //test($tictac->init(3)->getMap(),
-            //    [
-            //        ["", "", ""],
-            //        ["", "", ""],
-            //        ["", "", ""]
-            //    ]
-            //);
-            //
-            //test($tictac->init(3)->putCross(1, 2)->getMap(),
-            //    [
-            //        ["", "", ""],
-            //        ["", "", "X"],
-            //        ["", "", ""]
-            //    ]
-            //);
-            //
-            //test($tictac->init(3)->putCross(2, 2)->getMap(),
-            //    [
-            //        ["", "", ""],
-            //        ["", "", ""],
-            //        ["", "", "X"]
-            //    ]
-            //);
-            //test($tictac->init(3)->putZero(1, 2)->getMap(),
-            //    [
-            //        ["", "", ""],
-            //        ["", "", "O"],
-            //        ["", "", ""]
-            //    ]
-            //);
-            //
-            //test($tictac->init(3)->putZero(2, 2)->getMap(),
-            //    [
-            //        ["", "", ""],
-            //        ["", "", ""],
-            //        ["", "", "O"]
-            //    ]
-            //);
+            test($tictac->init(2)->getMap(),
+                [
+                    ["", ""],
+                    ["", ""]
+
+                ]
+            );
+
+
+            test($tictac->init(3)->getMap(),
+                [
+                    ["", "", ""],
+                    ["", "", ""],
+                    ["", "", ""]
+                ]
+            );
+
+            test($tictac->init(3)->putCross(1, 2)->getMap(),
+                [
+                    ["", "", ""],
+                    ["", "", "X"],
+                    ["", "", ""]
+                ]
+            );
+
+            test($tictac->init(3)->putCross(2, 2)->getMap(),
+                [
+                    ["", "", ""],
+                    ["", "", ""],
+                    ["", "", "X"]
+                ]
+            );
+            test($tictac->init(3)->putZero(1, 2)->getMap(),
+                [
+                    ["", "", ""],
+                    ["", "", "O"],
+                    ["", "", ""]
+                ]
+            );
+
+            test($tictac->init(3)->putZero(2, 2)->getMap(),
+                [
+                    ["", "", ""],
+                    ["", "", ""],
+                    ["", "", "O"]
+                ]
+            );
+
+            test($tictac
+                ->init(3)
+                ->putCross(2, 1)
+                ->putZero(1, 1)
+                ->putCross(2, 2)
+                ->putZero(0, 2)
+                ->putCross(2, 0)
+                ->getMap(),
+                [
+                    ["", "", "O"],
+                    ["", "O", ""],
+                    ["X", "X", "X"]
+                ]
+            );
+
+            test($tictac
+                ->init(3)
+                ->putCross(2, 1)
+                ->putZero(1, 1)
+                ->putCross(2, 2)
+                ->putZero(0, 2)
+                ->putCross(2, 0)
+                ->checkWinner(),
+                true
+            );
+
+            test($tictac
+                ->init(3)
+//                ->putCross(2, 1)
+//                ->putZero(1, 1)
+//                ->putCross(2, 2)
+//                ->putZero(0, 2)
+//                ->putCross(2, 0)
+                ->checkWinner(),
+                false
+            );
+
+            test($tictac->setMap([
+                ["", "", ""],
+                ["", "", ""],
+                ["", "", ""]
+            ])->checkWinnerByCol()
+            );
             ?>
         </div>
         <div class="col-sm">
