@@ -127,6 +127,30 @@
                 ["", "", ""]
             ])->checkWinnerByCol()
             );
+
+            test($tictac->setMap([
+                ["", "", ""],
+                ["", "", ""],
+                ["", "", ""]
+            ])->checkWinnerByDiagonal(),
+                false
+            );
+
+            test($tictac->setMap([
+                ["", "", "X"],
+                ["", "X", ""],
+                ["X", "", ""]
+            ])->checkWinnerByDiagonal(),
+                true
+            );
+
+            test($tictac->setMap([
+                ["", "", "O"],
+                ["", "O", ""],
+                ["O", "", ""]
+            ])->checkWinnerByDiagonal(),
+                true
+            );
             ?>
         </div>
         <div class="col-sm">

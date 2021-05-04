@@ -35,7 +35,7 @@ class Calc
 
 }
 
-$calc1 = new Calc(2, 4);
+$calc1 = new AbstractCalc(2, 4);
 
 echo $calc1->sum() . "<br>";
 echo $calc1->difference() . "<br>";

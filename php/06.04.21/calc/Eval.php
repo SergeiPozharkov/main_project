@@ -2,7 +2,7 @@
 
 include_once "Calc.php";
 
-$calc = new Calc($_POST["a"], $_POST["b"]);
+$calc = new AbstractCalc($_POST["a"], $_POST["b"]);
 
 //echo "Произведение = " . $calc->multiply() . "<br>";
 //echo "Частное = " . $calc->divide() . "<br>";

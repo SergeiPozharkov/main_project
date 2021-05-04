@@ -71,9 +71,27 @@ class Tictac
         return $this->checkWinnerByRow($map);
     }
 
-    public function checkWinner()
+    public function checkWinner(): bool
     {
         return $this->checkWinnerByRow($this->map) or $this->checkWinnerByCol();
+    }
+
+    /**
+     * @return bool
+     */
+    public function checkWinnerByDiagonal(): bool
+    {
+
+        if ($this->map[0][0] !== "") {
+            $winner = true;
+            for ($i = 1; $i < count($this->map); $i++) {
+                if ($this->map[$i][$i] !== $this->map[$i - 1][$i - 1]) {
+                    $winner = false;
+                }
+            }
+            return $winner;
+        }
+        return false;
     }
 
     /**
