@@ -50,7 +50,7 @@ class FirstCalc
     {
         return $this->b;
     }
-    
+
     /** Метод реализующий сложение 2-х чисел.
      * @return float
      */
@@ -68,4 +68,8 @@ class FirstCalc
 
     }
 
+    public function renderFirstCalc()
+    {
+        return "<h1>Первый калькулятор:</h1><b>a</b> = {$this->getA()}<br>";
+    }
 }
