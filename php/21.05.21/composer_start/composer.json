@@ -1,0 +1,7 @@
+{
+  "autoload": {
+    "psr-4": {
+      "composer_start\\": "App/Pozharkov"
+    }
+  }
+}
