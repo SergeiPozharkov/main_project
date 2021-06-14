@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form action="?form" method="post">
+    <input type="text" name="byn"
+    <?php if (isset($_POST['byn'])): ?>
+    value="<?= $_POST['byn'] ?>"
+    <?php endif; ?>>
+    <span>BYN </span><select name="currency">
+    <option value="ConvertToRub">RUB</option>
+    <option value="ConvertToUsd">USD</option>
+    <option value="ConvertToEur">EUR</option>
+    <option value="ConvertToGbp">GBP</option>
+    <option value="ConvertToCad">CAD</option>
+</select>
+    <span>Result convertation </span><input type="text" name="result"
+    <?php if (isset($_POST['currency'])): ?>
+    value="<?= $converter->{$_POST['currency']}(); ?>"
+    <?php endif; ?>>
+    <input type="submit" value="convert">
+</form>
+</body>
+</html>
