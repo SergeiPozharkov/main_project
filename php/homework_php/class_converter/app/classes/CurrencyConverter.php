@@ -32,7 +32,7 @@ class CurrencyConverter
     public function ConvertToRub(): float
     {
         $convertRes = $this->belRubSum * 28.88;
-        if ($convertRes > 1000000) {
+        if ($convertRes > 100000) {
             return $this->belRubSum * 30;
         }
         return $convertRes;
