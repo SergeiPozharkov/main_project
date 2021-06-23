@@ -26,12 +26,13 @@ class Br
         return $this;
     }
 
-    public function html()
+    /**
+     * @return string
+     */
+    public function html(): string
     {
         return "$this->text<$this->tagName>$this->text<$this->tagName>";
     }
-
-
 
 
 }
