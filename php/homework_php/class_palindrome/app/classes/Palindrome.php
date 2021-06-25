@@ -17,7 +17,7 @@ class Palindrome
     /**
      * Palindrome constructor.
      */
-    public function __construct()
+    public function __construct(string $str = '')
     {
         $this->setStr($this->str);
     }
@@ -33,14 +33,14 @@ class Palindrome
     }
 
     /**
-     *Работает со всеми текстами (utf-8)
-     * @return string
+     *Переворачивает отформатированную строку
+     * @return array
      */
-    public function palindromeCheck(): string
+    public function reversString(): array
     {
         $reversString = '';
         $string = preg_replace(
-            "/[,.!?-_]+/u",
+            "/[,.!?-_:;]+/u",
             '',
             mb_strtolower(str_replace(' ', '', $this->str))
         );
@@ -48,7 +48,7 @@ class Palindrome
         for ($i = mb_strlen($string); $i >= 0; $i--) {
             $reversString .= mb_substr($string, $i, 1);
         }
-        return $reversString === $string ? '<h1>This is palindrome</h1>' : '<h1>This is not palindrome</h1>';
+        return ['str' => $string, 'str_rev' => $reversString];
     }
 
 }
