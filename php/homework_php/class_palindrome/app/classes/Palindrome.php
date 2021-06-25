@@ -19,7 +19,7 @@ class Palindrome
      */
     public function __construct(string $str = '')
     {
-        $this->setStr($this->str);
+        $this->setStr($str);
     }
 
     /**

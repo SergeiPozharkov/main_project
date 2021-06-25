@@ -20,7 +20,7 @@ use classes\PalindromeCheck;
 if (isset($_POST)) {
     echo (new PalindromeCheck(new Palindrome($_POST['string'])))->palindromeCheck();
 }
-//$_POST['string']
+
 ?>
 <a href="index.php" class="btn btn-primary">check again</a>
 </body>
