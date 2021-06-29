@@ -23,4 +23,14 @@ class Blurb
         </ul> по цене {$this->iCar->price()}  бел.руб. (торг уместен)";
     }
 
+    /**
+     * @param ICar $iCar
+     * @return $this
+     */
+    public function setICar(ICar $iCar): static
+    {
+        $this->iCar = $iCar;
+        return $this;
+    }
+
 }

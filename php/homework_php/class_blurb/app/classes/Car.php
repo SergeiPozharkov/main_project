@@ -6,23 +6,14 @@ namespace classes;
 
 class Car implements ICar
 {
-    protected string $name;
-    protected float $maxSpeed;
-    protected float $consumptionFuel;
-    protected float $price;
-    protected string $color;
-    protected float $engineVolume;
-
-
-    public function __construct(string $name, string $color, float $price, float $maxSpeed, float $engineVolume,
-                                float $consumptionFuel)
+    public function __construct(
+        protected string $name,
+        protected string $color,
+        protected float $price,
+        protected float $maxSpeed,
+        protected float $engineVolume,
+        protected float $consumptionFuel)
     {
-        $this->name = $name;
-        $this->color = $color;
-        $this->price = $price;
-        $this->maxSpeed = $maxSpeed;
-        $this->engineVolume = $engineVolume;
-        $this->consumptionFuel = $consumptionFuel;
     }
 
     public function name(): string
