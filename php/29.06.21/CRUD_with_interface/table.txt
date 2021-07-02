@@ -1,0 +1,2 @@
+0;Name:Иванов;ZP:150
+;Array;Array

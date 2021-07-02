@@ -13,7 +13,7 @@ class DB
         $this->driver = $driver;
     }
 
-    public function select()
+    public function select(): array
     {
         return $this->driver->reade();
     }
