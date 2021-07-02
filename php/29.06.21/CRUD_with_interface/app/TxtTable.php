@@ -4,51 +4,8 @@
 namespace app;
 
 
-class TxtTable //extends AbstractTable implements ICRUD
+class TxtTable extends AbstractTable implements ICRUD
 {
-
-    protected string $fileName;
-
-    public function __construct(string $fileName)
-    {
-        $this->fileName = $fileName;
-    }
-
-    /**
-     * Удаляет строку из таблицы
-     * @return PhpTable
-     */
-    public function delete(int $id): static
-    {
-        $table = $this->reade();
-        unset($table[$id]);
-        $this->save($table);
-        return $this;
-    }
-
-    /**
-     * Добавляет строку данных в таблицу
-     * @return PhpTable
-     */
-    public function create(array $row): static
-    {
-        $table = $this->reade();
-        $table[] = $row;
-        $this->save($table);
-        return $this;
-    }
-
-    /**
-     * Изменяет строку в таблице
-     * @return PhpTable
-     */
-    public function update(int $id, array $row): static
-    {
-        $table = $this->reade();
-        $table[$id] = $row;
-        $this->save($table);
-        return $this;
-    }
 
     /**
      * Возвращает всю таблицу
@@ -57,7 +14,19 @@ class TxtTable //extends AbstractTable implements ICRUD
     public function reade(): array
     {
         if (file_exists($this->fileName)) {
-            return explode(';', file_get_contents($this->fileName));
+            $rows = explode("\n", file_get_contents($this->fileName));
+
+            $table = [];
+            foreach ($rows as $row) {
+                $rowBuf = explode(';', $row);
+
+                for ($i = 1; $i < count($rowBuf); $i++) {
+                    $elementBuf = explode(':', $rowBuf[$i]);
+                    $table[$rowBuf[0]][$elementBuf[0]] = $elementBuf[1];
+
+                }
+            }
+            return $table;
         } else {
             return [];
         }
@@ -65,18 +34,23 @@ class TxtTable //extends AbstractTable implements ICRUD
 
     protected function save(array $table): void
     {
-        file_put_contents($this->fileName, $this->toStr($table));
+        $txt = "";
+        foreach ($table as $id => $row) {
+            $txt .= "$id";
+            foreach ($row as $key => $value) {
+                $txt .= ";$key:$value";
+            }
+            $txt .= "\n";
+        }
+        file_put_contents($this->fileName, $txt);
     }
 
-    public function toStr(array $table): string
-    {
-        return str_replace(',', ';', implode(',', $table));
-    }
+
 }
 
-$txt = new TxtTable('../table.txt');
-
-echo $txt->toStr([0 => 0,
-    1 => "Name:Иванов",
-    2 => "ZP:150"
-]);
+//$txt = new TxtTable('../table.txt');
+//
+//echo $txt->toStr([0 => 0,
+//    1 => "Name:Иванов",
+//    2 => "ZP:150"
+//]);

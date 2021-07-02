@@ -12,14 +12,13 @@ use app\TxtTable;
 //print_r($json->reade());
 
 //$json->create(["fio" => "Anton", "zp" => 100]);
-
-$db = new DB(new TxtTable('table.txt'));
+$jsonDriver = new JsonTable('table.json');
+$txtDriver = new TxtTable('table.txt');
+$db = new DB($txtDriver);
 //$db->insert([0 => ['Name' => 'Иванов', 'ZP' => 150]]);
 print_r($db->select());
-$db->insert([0 => 0,
-    1 => "Name:Иванов",
-    2 => "ZP:150"
-]);
 
-//$db->insert(["fio" => "Kolya", "zp" => 11100]);
+
+$db->insert(["Name" => "Kolya", "ZP" => 11100]);
+$db->insert(["Name" => "Anton", "ZP" => 900]);
 //$db->update(1, ["fio" => "Kolyaa", "zp" => 1100]);
