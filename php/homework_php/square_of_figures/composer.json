@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "classes\\": "app/classes"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "test": "phpunit --testsuite testsforfigures"
+  }
+}
