@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CalcTest::testSinA":3,"CalcTest::testCosA":3},"times":{"CalcTest::testSqrtA":0.004,"CalcTest::testSinA":0,"CalcTest::testCosA":0,"CalcTest::testAbsA":0,"CalcTest::testExpA":0.004}}
