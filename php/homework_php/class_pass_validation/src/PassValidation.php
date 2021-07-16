@@ -40,10 +40,11 @@ class PassValidation
      */
     public function maxLimitSymbols(): bool
     {
-        if (strlen($this->pass) > 128) {
-            return false;
-        } else {
+        if (strlen($this->pass) <= 128) {
             return true;
+
+        } else {
+            return false;
         }
     }
 
@@ -56,7 +57,6 @@ class PassValidation
         if (preg_match_all("/[A-Z]/", $this->pass) >= 1 && preg_match_all("/[a-z]/", $this->pass) >= 1) {
             return true;
         }
-        echo "Пароль должен содержать минимум по одной строчной и заглавной букве";
         return false;
     }
 
