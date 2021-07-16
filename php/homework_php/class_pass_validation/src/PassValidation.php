@@ -6,6 +6,10 @@ namespace App;
 
 class PassValidation
 {
+    /**
+     * Проверяемый пароль
+     * @var string
+     */
     protected string $pass = '';
 
     /**
@@ -27,7 +31,6 @@ class PassValidation
         if (strlen($this->pass) >= 8) {
             return true;
         }
-        echo "Пароль должен быть не менее 8 символов";
         return false;
     }
 
@@ -39,7 +42,6 @@ class PassValidation
     {
         if (strlen($this->pass) > 128) {
             return false;
-//            echo "Пароль должен быть не более 128 символов";
         } else {
             return true;
         }
@@ -65,7 +67,6 @@ class PassValidation
     public function cyrillicSymbolsCheck(): bool
     {
         if (preg_match_all("/[а-я]/ui", $this->pass) != mb_strlen($this->pass)) {
-            echo "Пароль не полностью состоит из кириллических символов";
             return false;
         }
         return true;
@@ -81,7 +82,6 @@ class PassValidation
         if (preg_match_all("/[a-z]/i", $this->pass) == strlen($this->pass)) {
             return true;
         }
-        echo "Пароль не полностью состоит из латинских символов";
         return false;
     }
 
@@ -94,7 +94,6 @@ class PassValidation
         if (preg_match_all("/[\d]/", $this->pass) >= 1) {
             return true;
         }
-        echo "В пароле должна присутствовать как минимум одна цифра";
         return false;
     }
 
@@ -107,7 +106,6 @@ class PassValidation
         if (preg_match_all("/[\d]/", $this->pass) == strlen($this->pass)) {
             return true;
         }
-        echo "Пароль должен состоять из арабских цифр";
         return false;
     }
 
@@ -118,7 +116,6 @@ class PassValidation
     public function spaceCheck(): bool
     {
         if (preg_match_all("/[\s]/", $this->pass)) {
-            echo "Пароль не должен содержать пробелы";
             return false;
         }
         return true;
@@ -133,7 +130,6 @@ class PassValidation
         if (!preg_match_all("/[:~!?@#$%^&*_+(){}><.,;]/u", $this->pass)) {
             return true;
         }
-        echo "Пароль не должен содержать недопустимые символы";
         return false;
     }
 }
