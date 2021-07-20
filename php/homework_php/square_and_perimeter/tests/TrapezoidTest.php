@@ -9,6 +9,11 @@ class TrapezoidTest extends TestCase
 {
     private Trapezoid $trapezoid;
 
+    public function __construct(Trapezoid $trapezoid)
+    {
+        $this->trapezoid = $trapezoid;
+    }
+
     protected function setUp(): void
     {
         $this->trapezoid = new Trapezoid();

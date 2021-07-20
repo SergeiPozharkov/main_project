@@ -7,8 +7,12 @@ use App\Square;
 
 class SquareTest extends TestCase
 {
-    private \App\Square $square;
+    private Square $square;
 
+    public function __construct(Square $square)
+    {
+        $this->square = $square;
+    }
 
     protected function setUp(): void
     {

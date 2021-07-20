@@ -9,6 +9,11 @@ class TriangleTest extends TestCase
 {
     private Triangle $triangle;
 
+    public function __construct(Triangle $triangle)
+    {
+        $this->triangle = $triangle;
+    }
+
     protected function setUp(): void
     {
         $this->triangle = new Triangle();
