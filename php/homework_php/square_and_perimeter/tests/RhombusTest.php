@@ -9,11 +9,6 @@ class RhombusTest extends TestCase
 {
     private Rhombus $rhombus;
 
-    public function __construct(Rhombus $rhombus)
-    {
-        $this->rhombus = $rhombus;
-    }
-
     protected function setUp(): void
     {
         $this->rhombus = new Rhombus();

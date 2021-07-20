@@ -10,11 +10,6 @@ class RectangleTest extends TestCase
 {
     private Rectangle $rectangle;
 
-    public function __construct(Rectangle $rectangle)
-    {
-        $this->rectangle = $rectangle;
-    }
-
     protected function setUp(): void
     {
         $this->rectangle = new Rectangle();

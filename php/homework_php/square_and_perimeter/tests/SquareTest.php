@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace tests;
 
 use PHPUnit\Framework\TestCase;
 use App\Square;
@@ -8,11 +8,6 @@ use App\Square;
 class SquareTest extends TestCase
 {
     private Square $square;
-
-    public function __construct(Square $square)
-    {
-        $this->square = $square;
-    }
 
     protected function setUp(): void
     {
